@@ -3,9 +3,9 @@ import Image from "next/image";
 
 function Contact() {
   return (
-    <div className="flex flex-col font-monumentExtended space-y-4 w-full bg-red-400 px-20  py-10 h-screen">
-      <h1 className="text-white text-4xl">Contact</h1>
-      <p className="text-white text-sm">
+    <div className="flex flex-col font-monumentExtended space-y-4 w-full bg-red-400 px-20 py-10 h-screen sm:px-10 sm:py-5">
+      <h1 className="text-white text-4xl sm:text-2xl">Contact</h1>
+      <p className="text-white text-sm sm:text-xs">
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
