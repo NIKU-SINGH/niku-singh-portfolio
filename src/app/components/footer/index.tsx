@@ -46,13 +46,13 @@ const navLinks: NavLink[] = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="block bg-gray-900 w-full">
-      <div className="py-16 md:py-20 mx-auto w-full max-w-7xl px-5 md:px-10 font-monumentExtended">
-        <div className="sm:flex-row flex justify-between flex-col">
-          <h2 className="font-bold text-3xl md:text-5xl w-full max-w-xl text-white">
+    <footer className="block bg-gray-900 w-full sm:px-4 sm:py-8">
+      <div className="py-16 md:py-20 mx-auto w-full max-w-7xl px-5 md:px-10 font-monumentExtended sm:py-10 sm:px-6">
+        <div className="sm:flex-row flex justify-between flex-col sm:space-y-4">
+          <h2 className="font-bold text-3xl md:text-5xl w-full max-w-xl text-white sm:text-2xl">
             Lightning fast Next.js Dev made easy
           </h2>
-          <div className="mt-8 md:mt-0">
+          <div className="mt-8 md:mt-0 sm:mt-4">
             <div className="mb-4 flex max-w-72 items-start justify-start">
               <Image
                 src="/images/map-pin.svg"
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
                 height={24}
                 className="mr-3"
               />
-              <p className="text-gray-400 text-sm sm:text-base">
+              <p className="text-gray-400 text-sm sm:text-xs">
                 8502 Preston Rd. Inglewood, Maine 98380, USA
               </p>
             </div>
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
                 height={24}
                 className="mr-3"
               />
-              <p className="text-gray-400 text-sm sm:text-base">
+              <p className="text-gray-400 text-sm sm:text-xs">
                 support@company.co
               </p>
             </div>
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Social Links */}
-        <div className="flex justify-center space-x-6 mt-8">
+        <div className="flex justify-center space-x-6 mt-8 sm:mt-4">
           {socialLinks.map((item) => (
             <Link
               key={item.name}
@@ -91,26 +91,26 @@ const Footer: React.FC = () => {
               rel="noopener noreferrer"
             >
               <span className="sr-only">{item.name}</span>
-              <item.icon className="h-6 w-6" />
+              <item.icon className="h-6 w-6 sm:h-5 sm:w-5" />
             </Link>
           ))}
         </div>
 
-        <div className="mb-14 w-full border-b border-gray-800 mt-16"></div>
+        <div className="mb-14 w-full border-b border-gray-800 mt-16 sm:mt-10"></div>
 
-        <div className="md:flex-row flex justify-between sm:items-center sm:flex-col items-start flex-col-reverse">
-          <nav className="font-semibold mb-4 sm:mb-0 py-1 text-center sm:text-center">
+        <div className="md:flex-row flex justify-between sm:items-center sm:flex-col items-start flex-col-reverse sm:space-y-4">
+          <nav className="font-semibold mb-4 sm:mb-0 py-1 text-center sm:text-center sm:py-2">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="inline-block font-normal text-gray-400 transition hover:text-blue-500 sm:pr-6 lg:pr-12 py-1.5 sm:py-2 pr-6"
+                className="inline-block font-normal text-gray-400 transition hover:text-blue-500 sm:pr-4 lg:pr-8 py-1.5 sm:py-2 pr-6"
               >
                 {link.name}
               </Link>
             ))}
           </nav>
-          <p className="text-gray-400 text-sm sm:text-base">
+          <p className="text-gray-400 text-sm sm:text-xs">
             © {new Date().getFullYear()} Company Name. All rights reserved.
           </p>
         </div>
